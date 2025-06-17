@@ -2,6 +2,8 @@
 This repository will have the details of the code and hardware requerd to be used with liniar transponder
 Proposed communication protocol stack
 
+ <img src="New_QO_100_sat.jpg" alt="laers" > 
+
 [SIP PBX] <-> [VoIP Gateway/Linux PC] <-> [Codec2/FreeDV or G.729 Encoder] <-> [Modem + RF] <-> [Remote Node]
 PROTOCOL STACK (Simplified)
 
