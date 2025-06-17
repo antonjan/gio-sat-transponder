@@ -27,8 +27,8 @@ RF Physical
 Transmit over the 333 kHz channel
 Custom/SDR/Analog RF
 
-HARDWARE SETUP OPTIONS
-Option A: Using PC + SDR (Software-Defined Radio)
+## HARDWARE SETUP OPTIONS
+Option A: Using PC + SDR (Software-Defined Radio)<br>
 🖥️ At SIP PBX side:
     • Software:
         ◦ SIP server (Asterisk, FreeSWITCH)
@@ -37,18 +37,18 @@ Option A: Using PC + SDR (Software-Defined Radio)
     • RF Interface:
         ◦ SDR device (e.g., HackRF, LimeSDR, PlutoSDR)
         ◦ GNU Radio or freedv modem integration
-📻 At RF side:
+## 📻 At RF side:<br>
     • Use GNU Radio flow graph to:
         ◦ Modulate compressed audio (BPSK or QPSK)
         ◦ Keep channel usage under 333 kHz
         ◦ Handle framing, preamble, sync
-Example SDR flow graph:
+## Example SDR flow graph:<br>
     • Codec2 Input (1400 bps)
     • BPSK Modulator
     • Root Raised Cosine Filter
     • Transmit via SDR (333 kHz bandwidth)
 
-🛠️ Option B: Embedded Setup (Low-power field unit)
+## 🛠️ Option B: Embedded Setup (Low-power field unit)
     • Raspberry Pi or ESP32 for codec and packet logic
     • G.729 or Codec2 running via linphonec or freedv
     • Modem:
