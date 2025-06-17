@@ -5,9 +5,7 @@ Proposed communication protocol stack
 [SIP PBX] <-> [VoIP Gateway/Linux PC] <-> [Codec2/FreeDV or G.729 Encoder] <-> [Modem + RF] <-> [Remote Node]
 PROTOCOL STACK (Simplified)
 
-Layer
-Function
-Protocol/Tech<br>
+|Layer|Function|Protocol/Tech|
 Application
 SIP call control + voice data
 SIP, RTP, SIP proxy<br>
