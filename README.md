@@ -29,14 +29,14 @@ Custom/SDR/Analog RF
 
 ## HARDWARE SETUP OPTIONS
 Option A: Using PC + SDR (Software-Defined Radio)<br>
-🖥️ At SIP PBX side:
-    • Software:
-        ◦ SIP server (Asterisk, FreeSWITCH)
-        ◦ Softphone (Linphone, Zoiper) or SIP client daemon
-        ◦ FreeDV or Codec2 encoder (freedv_tx, c2enc)
-    • RF Interface:
-        ◦ SDR device (e.g., HackRF, LimeSDR, PlutoSDR)
-        ◦ GNU Radio or freedv modem integration
+🖥️ At SIP PBX side:<br>
+    • Software:<br>
+        ◦ SIP server (Asterisk, FreeSWITCH)<br>
+        ◦ Softphone (Linphone, Zoiper) or SIP client daemon<br>
+        ◦ FreeDV or Codec2 encoder (freedv_tx, c2enc)<br>
+    • RF Interface:<br>
+        ◦ SDR device (e.g., HackRF, LimeSDR, PlutoSDR)<br>
+        ◦ GNU Radio or freedv modem integration<br>
 ## 📻 At RF side:<br>
     • Use GNU Radio flow graph to:
         ◦ Modulate compressed audio (BPSK or QPSK)
