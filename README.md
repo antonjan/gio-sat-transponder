@@ -29,7 +29,7 @@ Custom/SDR/Analog RF
 
 ## HARDWARE SETUP OPTIONS
 Option A: Using PC + SDR (Software-Defined Radio)<br>
-🖥️ At SIP PBX side:<br>
+## 🖥️ At SIP PBX side:<br>
     • Software:<br>
         ◦ SIP server (Asterisk, FreeSWITCH)<br>
         ◦ Softphone (Linphone, Zoiper) or SIP client daemon<br>
@@ -72,18 +72,18 @@ linphonec -c /path/to/config -a -s sip:1002@pbx.server
 linphonec > pipe | sox -t raw -r 8k -e signed -b 16 -c 1 - -t raw -r 8k -e signed -b 16 -c 1 - | c2enc 1400 - - | modem_tx
 
 Replace modem_tx with your SDR or RF module interface script.
-📡 Modem (e.g., GNU Radio or Embedded)
+## 📡 Modem (e.g., GNU Radio or Embedded)
     • Sample baud rate: 20–60 kbps
     • Use differential BPSK or QPSK
     • Frame structure:
         ◦ [Preamble][Sync Word][Header][Compressed Voice][CRC]
 
-📶 5. EXAMPLE: Using Codec2 + FreeDV over RF
+## 📶 5. EXAMPLE: Using Codec2 + FreeDV over RF
 You can use FreeDV mode 700D or 1600 (700–1600 bps), perfect for 333 kHz:
 freedv_tx 700D mic_input.raw > /dev/ttyUSB0
 Or with freedv-gui (audio + waterfall + modem all-in-one).
 
-📜 6. Summary Table
+## 📜 6. Summary Table
 
 Component
 Tech/Tool
