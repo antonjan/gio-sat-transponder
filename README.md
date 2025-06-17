@@ -5,16 +5,10 @@ Proposed communication protocol stack
 [SIP PBX] <-> [VoIP Gateway/Linux PC] <-> [Codec2/FreeDV or G.729 Encoder] <-> [Modem + RF] <-> [Remote Node]
 PROTOCOL STACK (Simplified)
 
-|Layer|Function|Protocol/Tech|
-Application
-SIP call control + voice data
-SIP, RTP, SIP proxy<br>
-Transport
-Real-time transport of audio
-UDP<br>
-Codec
-Compresses audio to fit narrowband
-Codec2, G.729, Opus<br>
+|Layer           |Function                          |Protocol/Tech         |
+|Application     |SIP call control + voice data     |SIP, RTP, SIP proxy   |
+|Transport       |Real-time transport of audio      |UDP                   |
+|Codec           |Compresses audio to fit narrowband|Codec2, G.729, Opus   |
 Framing
 Frames data for modem
 SLIP, KISS, custom framing<br>
