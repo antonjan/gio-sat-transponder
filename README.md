@@ -5,20 +5,13 @@ Proposed communication protocol stack
 [SIP PBX] <-> [VoIP Gateway/Linux PC] <-> [Codec2/FreeDV or G.729 Encoder] <-> [Modem + RF] <-> [Remote Node]
 PROTOCOL STACK (Simplified)
 
-|Layer           |Function                          |Protocol/Tech         |
-|Application     |SIP call control + voice data     |SIP, RTP, SIP proxy   |
-|Transport       |Real-time transport of audio      |UDP                   |
-|Codec           |Compresses audio to fit narrowband|Codec2, G.729, Opus   |
-Framing
-Frames data for modem
-SLIP, KISS, custom framing<br>
-Modulation
-Converts digital to analog RF
-BPSK, QPSK, 16-QAM<br>
-RF Physical
-Transmit over the 333 kHz channel
-Custom/SDR/Analog RF
-
+|Layer           |Function                          |Protocol/Tech             |<br>
+|Application     |SIP call control + voice data     |SIP, RTP, SIP proxy       |<br>
+|Transport       |Real-time transport of audio      |UDP                       |<br>
+|Codec           |Compresses audio to fit narrowband|Codec2, G.729, Opus       |<br>
+|Framing         |Frames data for modem             |SLIP, KISS, custom framing|<br>
+|Modulation      |Converts digital to analog RF     |BPSK, QPSK, 16-QAM        |<br>
+|RF Physical     |Transmit over the 333 kHz channel |Custom/SDR/Analog RF      |<br>
 ## HARDWARE SETUP OPTIONS
 Option A: Using PC + SDR (Software-Defined Radio)<br>
 ## 🖥️ At SIP PBX side:<br>
