@@ -7,22 +7,22 @@ PROTOCOL STACK (Simplified)
 
 Layer
 Function
-Protocol/Tech
+Protocol/Tech<br>
 Application
 SIP call control + voice data
-SIP, RTP, SIP proxy
+SIP, RTP, SIP proxy<br>
 Transport
 Real-time transport of audio
-UDP
+UDP<br>
 Codec
 Compresses audio to fit narrowband
-Codec2, G.729, Opus
+Codec2, G.729, Opus<br>
 Framing
 Frames data for modem
-SLIP, KISS, custom framing
+SLIP, KISS, custom framing<br>
 Modulation
 Converts digital to analog RF
-BPSK, QPSK, 16-QAM
+BPSK, QPSK, 16-QAM<br>
 RF Physical
 Transmit over the 333 kHz channel
 Custom/SDR/Analog RF
