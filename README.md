@@ -165,3 +165,27 @@ Replace File Sink with UDP Sink:
 On the receiver:
         
 <img src="pluto_rx.jpg" alt="pluto_tx" > 
+
+      nc -ul 12346 | c2dec 1300 - - | aplay -f S16_LE -r 8000
+## Step 3: Add CRC and Packet Framing
+To improve reliability over RF, wrap Codec2 frames with a simple protocol.
+###🛠 Add in GNU Radio:
+Use Packet Encoder and Packet Decoder blocks.<br>
+Use CRC32 for error detection.<br>
+Set payload size to match Codec2 frame (e.g., 7 bytes for 1300 bit/s every 40ms).<br>
+###📦 Block Chain (TX):
+
+       UDP Source → Packet Encoder (7 bytes) → GFSK Mod → Pluto Sink
+###📦 Block Chain (RX):
+
+      Pluto Source → GFSK Demod → Packet Decoder → UDP Sink
+## 🎁 TX (Framing) Side Blocks
+1. Protocol Formatter
+
+    Found under: digital/protocols
+
+    Used to create tagged frames.
+
+    Formatter Object: packet_utils.default_formatter(pmt.intern("packet_len"))
+
+    This will tag each packet with its length.
