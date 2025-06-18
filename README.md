@@ -151,7 +151,7 @@ Replace File Source with a UDP Source block.
         Host: 127.0.0.1
         Port: 12345
         Type: Byte
- <img src="pluto_rx.jpg" alt="pluto_rx" > 
+ <img src="pluto_tx.jpg" alt="pluto_tx" > 
         
 ### Start a shell tool that encodes your mic into Codec2 and sends to that port:
         arecord -f S16_LE -r 8000 -t raw | c2enc 1300 - - | nc -u 127.0.0.1 12345
@@ -164,4 +164,4 @@ Replace File Sink with UDP Sink:
         Type: Byte
 On the receiver:
         
-        
+        <img src="pluto_rx.jpg" alt="pluto_tx" > 
