@@ -132,4 +132,24 @@ he script and GNU Radio flowgraphs are now separated into clear code blocks:
        
     2. 📡 GNU Radio TX flowgraph for BPSK modulation.
     3. 📻 GNU Radio RX flowgraph for BPSK demodulation.
+## Feed the received file /tmp/codec2_rx.bit into a Codec2 decoder to listen to the audio.
 
+🔧 Install Codec2 tools (if not already):
+
+     sudo apt install codec2
+🔄 Decode to WAV:
+
+     c2dec 1300 /tmp/codec2_rx.bit -o /tmp/codec2_rx.wav
+     aplay /tmp/codec2_rx.wav
+Replace 1300 with 700C, 1600, etc., depending on your Codec2 bitrate.
+## Step 2: Real-Time Audio Over GFSK (Send + Receive)
+This replaces the File Source/Sink with live audio + UDP to integrate with SIP or VoIP.
+🎙 TX Side: Live Microphone to GFSK
+
+Replace File Source with a UDP Source block.
+
+        Host: 127.0.0.1
+
+        Port: 12345
+
+        Type: Byte
