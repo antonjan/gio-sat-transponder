@@ -144,7 +144,7 @@ he script and GNU Radio flowgraphs are now separated into clear code blocks:
 Replace 1300 with 700C, 1600, etc., depending on your Codec2 bitrate.
 ## Step 2: Real-Time Audio Over GFSK (Send + Receive)
 This replaces the File Source/Sink with live audio + UDP to integrate with SIP or VoIP.
-🎙 TX Side: Live Microphone to GFSK
+### 🎙 TX Side: Live Microphone to GFSK
 
 Replace File Source with a UDP Source block.
 
@@ -152,4 +152,16 @@ Replace File Source with a UDP Source block.
         Port: 12345
         Type: Byte
  <img src="pluto_rx.jpg" alt="pluto_rx" > 
+        
+### Start a shell tool that encodes your mic into Codec2 and sends to that port:
+        arecord -f S16_LE -r 8000 -t raw | c2enc 1300 - - | nc -u 127.0.0.1 12345
+### 🎧 RX Side: GFSK to Speaker
+
+Replace File Sink with UDP Sink:
+
+        Host: 127.0.0.1
+        Port: 12346
+        Type: Byte
+On the receiver:
+        
         
