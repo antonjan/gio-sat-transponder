@@ -149,9 +149,7 @@ This replaces the File Source/Sink with live audio + UDP to integrate with SIP o
 Replace File Source with a UDP Source block.
 
         Host: 127.0.0.1
-
         Port: 12345
-
         Type: Byte
-
+ <img src="pluto_rx.jpg" alt="pluto_rx" > 
         
