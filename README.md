@@ -164,4 +164,4 @@ Replace File Sink with UDP Sink:
         Type: Byte
 On the receiver:
         
-        <img src="pluto_rx.jpg" alt="pluto_tx" > 
+<img src="pluto_rx.jpg" alt="pluto_tx" > 
